@@ -34,11 +34,6 @@ from DISClib.Algorithms.Sorting import shellsort as sa
 from DISClib.Algorithms.Sorting import mergesort as marg
 assert cf
 
-"""
-Se define la estructura de un catálogo de videos. El catálogo tendrá dos listas, una para los videos, otra para las categorias de
-los mismos.
-"""
-
 # Construccion de modelos
 def newdatabase():
     database = {'contendindex': None,
@@ -64,12 +59,8 @@ def newdatabase():
 
 
 def addevent(database, event):
-    """
-    se cargan los datos en el la estructura de datos
-    que en este caso es un map el cual contiene toda la informacion.
-    """
-
     hashtable = database['contendindex']
+
     tempo = event['tempo']
     energy =event['energy']
     valence = event['valence']
@@ -255,29 +246,6 @@ def countreproductions(maptracks, element, id, a, b): #hashtable para contar rep
         
 
 
-
-
-
-
-        
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
-
 # Funciones utilizadas para comparar elementos dentro de una lista
 
 # Funciones de ordenamiento
-
-def compareevents(event1, event2):
-    pass

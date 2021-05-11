@@ -41,7 +41,7 @@ operación solicitada
 
 def printMenu():
     print("\n")
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print(" Bienvenido")
     print(" 1 - Iniciar el catalogo. ")
     print(" 2 - Cargar información en el catálogo")
@@ -51,7 +51,7 @@ def printMenu():
     print(' 6 - Req.4 --> Estudiar los generos muiscales segun su Tempo.')
     print(' 7 - Req.5 --> Conocer el genero musical mas escuchado en un rango de tiempo.')
     print(" 0 - Salir.")
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 
 database = None
@@ -65,12 +65,11 @@ while True:
 
     if int(inputs[0]) == 1:
         print("\nInicializando....")
-        # cont es el controlador que se usará de acá en adelante
         database = controller.init()
-
     elif int(inputs[0]) == 2:
         print("Cargando información de los archivos ....")
         database = controller.loadevent(database)
+
 
     # Requerimiento 1.
     elif int(inputs[0]) == 3:
@@ -98,6 +97,7 @@ while True:
         print('Total of unique artists: ', sol[1])
         
     
+
     # Requerimiento 2.
     elif int(inputs[0]) == 4:
         print("\n")
@@ -106,6 +106,8 @@ while True:
         minvalue_dance = input('  --> Valor mínimo de la característica Danceability: ')
         maxvalue_dance = input('  --> Valor máximo de la característica Danceability: ')
         pass
+
+
 
     # Requerimiento 3.
     elif int(inputs[0]) == 5:
@@ -127,6 +129,8 @@ while True:
             print('Track',number,': ',event['track_id'], 'with instrumentalness of',
                 event['instrumentalness'],'and tempo of', event['tempo'])
             number+=1
+
+
 
     # Requerimiento 4.
     elif int(inputs[0]) == 6:
@@ -168,10 +172,6 @@ while True:
                 number+=1
             
 
-
-
-
-        
     
     # Requerimiento 5.
     elif int(inputs[0]) == 7:
