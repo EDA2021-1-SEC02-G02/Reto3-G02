@@ -111,7 +111,7 @@ def loadRBT(RBT, information, event, characteristic):  #arbol binario
 def newDataEntry(event):
     entry = {'tracks': None, 'artists': None, 'events': None}
     entry['tracks'] = lt.newList('ARRAY_LIST')
-    entry['artists'] = mp.newMap(100,  #poner 500
+    entry['artists'] = mp.newMap(300,                                      #poner 500
                                    maptype='PROBING',
                                    loadfactor=0.9,
                                    comparefunction= None)
@@ -155,7 +155,7 @@ def Requerimiento1(database, characteristic, minvalue, maxvalue):
     RBT = me.getValue(RBT)
     lst = om.values(RBT, minvalue, maxvalue)
     totalevets = 0
-    maptartist = createhahstable(2000) #poner 2000
+    maptartist = createhahstable(2000) 
 
     for event in lt.iterator(lst):
         totalevets += lt.size(event['tracks'])

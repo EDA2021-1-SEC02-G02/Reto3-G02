@@ -38,7 +38,7 @@ def init():
 # Funciones para la carga de datos
 
 def loadevent(database):
-    videosfile = cf.data_dir + 'context_content_features-small.csv'
+    videosfile = cf.data_dir + 'context_content_features-30pct.csv'
     input_file = csv.DictReader(open(videosfile, encoding='utf-8'))
     for event in input_file:
         model.addevent(database, event)

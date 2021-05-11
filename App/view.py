@@ -122,6 +122,8 @@ while True:
         print('Instrumentalness is between', minvalue_instru, 'and', maxvalue_instru)
         print('Tempo is between', minvalue_tempo, 'and', maxvalue_tempo)
         print('--> Total of unique tracks in events: ',sol[0])
+        print("                                             ")
+        print("------------ Unique track_id ------------")
         iterator = it.newIterator(sol[1])
         number= 1
         while (it.hasNext(iterator)) and number<6:
